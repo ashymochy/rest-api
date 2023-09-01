@@ -1,0 +1,43 @@
+# Node.js dependencies
+node_modules/
+
+# Environment file
+.env
+
+# Logs and temporary files
+*.log
+.tmp/
+
+# IDE and editor files (for Visual Studio Code)
+.vscode/
+.idea/
+.DS_Store
+
+# Build and output directories
+dist/
+build/
+
+# Dependency lock files
+package-lock.json
+yarn.lock
+
+# User-specific configuration
+.eslintrc.local
+.editorconfig.local
+
+# Sensitive data
+secrets/
+private-key.pem
+
+# Generated files
+*.cache
+
+# Test results and coverage reports
+coverage/
+junit.xml
+
+# Logs and debug output
+debug.log
+
+# Configurations for deployment tools (e.g., Elastic Beanstalk)
+.ebextensions/
