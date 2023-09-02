@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Use the MONGO_URI from your environment variables
+
 const mongoURI = process.env.MONGO_URI;
 
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -13,7 +13,7 @@ mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
 
 app.use(express.json());
 
-// Correct the route path to '/clients'
+
 app.use('/clients', require('./routes/clients'));
 
 app.listen(port, (error) => {
