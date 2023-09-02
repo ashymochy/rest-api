@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const Client = require('../models/client'); // Fix the import statement
+const Client = require('../models/client'); 
 
 // CREATE 
 router.post('/', async (req, res) => {
   try {
-    const newClient = new Client(req.body); // Use the 'Client' model
+    const newClient = new Client(req.body); 
     const savedClient = await newClient.save();
 
     res.status(201).json(savedClient);
@@ -18,7 +18,7 @@ router.post('/', async (req, res) => {
 // READ
 router.get('/', async (req, res) => {
   try {
-    const clients = await Client.find(); // Use the 'Client' model
+    const clients = await Client.find(); 
 
     res.json(clients);
   } catch (error) {
@@ -46,7 +46,7 @@ router.put('/:id', async (req, res) => {
 });
 
 // DELETE 
-router.delete('/:id', async (req, res, next) => { // Specify the ID parameter
+router.delete('/:id', async (req, res, next) => { 
   try {
     const deletedClient = await Client.findByIdAndRemove(req.params.id);
 
